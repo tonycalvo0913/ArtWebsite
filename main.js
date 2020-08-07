@@ -45,10 +45,10 @@ var listView = function(id, piecename) {
 }
 
 // Template that generates HTML for one item in our detail view, given the parameters passed in
-var detailView = function(id, piecename, pictureUrl, descriptions) {
+var detailView = function(id, piecename, images, descriptions) {
   return `<div class="col-sm-12">
     <div class="card mb-4 box-shadow">
-      <img class="card-img-top" src="${pictureUrl}">
+      <img class="card-img-top" src="${images}">
       <div class="card-body">
         <h2><a href="?id=${id}">${piecename}</a></h2>
         <div class="d-flex justify-content-between align-items-center">
@@ -70,10 +70,10 @@ var getDataForId = function(id) {
       var id = record.id;
       var fields = record.fields;
       var piecename = fields["PieceName"];
-      var pictureUrl = fields["Image"] ? fields["Image"][0].url : '';
+      var Images= fields["Images"] ? fields["Image"][0].url : '';
       var  descriptions = fields["Descriptions"];
       var tips= fields["Tips"];
-      var itemHTML = detailView(id, piecename, pictureUrl, descriptions);
+      var itemHTML = detailView(id, piecename, images, descriptions);
       html.push(itemHTML);
     html.push(`</div>`);
     $(".detail-view").append(html.join(""));
