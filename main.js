@@ -36,7 +36,7 @@ var listView = function(id, piecename, ranking) {
         var id = val.id;
         var fields = val.fields;
         var piecename = fields["PieceName"];
-        var ranking = fields["Rankimg"];
+        var ranking = fields["Ranking"];
         var itemHTML = listView(id, piecename, ranking);
         html.push(itemHTML);
     });
