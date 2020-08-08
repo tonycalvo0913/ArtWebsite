@@ -1,10 +1,10 @@
-.container list-view{   
+.container list-view{ 
+	img {
+ 		max-width: 100%;
+ 		 height: auto;
+	}  
 }
 
 .container detail-view{
 }
 
-.img {
-  max-width: 100%;
-  height: auto;
-}
