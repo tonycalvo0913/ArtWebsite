@@ -72,7 +72,7 @@ var getDataForId = function(id) {
       //console.log(val)
       var id = record.id;
       var fields = record.fields;
-      var piecename = fields["PieceName"];
+      var Piecename = fields["PieceName"];
       var Images= fields["Images"] ? fields["Image"][0].url : '';
       var Descriptions = fields["Descriptions"];
       var Ranking= fields["Ranking"];
