@@ -1,4 +1,6 @@
 .container list-view{ 
+	background: "tony2.jpeg";
+	background-size: auto;
 }
 
 .container detail-view{
