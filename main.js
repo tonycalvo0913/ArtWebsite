@@ -72,10 +72,10 @@ var getDataForId = function(id) {
       //console.log(val)
       var id = record.id;
       var fields = record.fields;
-      var Piecename = fields["PieceName"];
-      var Images= fields["Images"] ? fields["Image"][0].url : '';
-      var Descriptions = fields["Descriptions"];
-      var Ranking= fields["Ranking"];
+      var piecename = fields["PieceName"];
+      var images= fields["Images"] ? fields["Image"][0].url : '';
+      var descriptions = fields["Descriptions"];
+      var ranking= fields["Ranking"];
       var itemHTML = detailView(id, piecename, images, descriptions, ranking);
       html.push(itemHTML);
     html.push(`</div>`);
