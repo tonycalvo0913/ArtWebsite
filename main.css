@@ -1,4 +1,13 @@
-.container list-view{    
+.container list-view{   
+	img:hover {
+  transform: scaleX(-1);
+    }
+
+	img {
+  max-width: 100%;
+  height: auto;
+	}
+
 }
 
 .container detail-view{
