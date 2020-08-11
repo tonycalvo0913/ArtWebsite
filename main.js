@@ -11,7 +11,7 @@ var getParameterByName = function(name, url) {
 var api_key = 'keyB7EQxA9Lt2lvXE'
 
 //This is the url from the Airtable Authentication section
-var airtable_list_url = 'https://api.airtable.com/v0/appeG8kkwJsPViya8/Hand%20Drawings?api_key=keyB7EQxA9Lt2lvXE';
+var airtable_list_url = 'https://api.airtable.com/v0/appeG8kkwJsPViya8/Art%20Pieces?api_key=keyB7EQxA9Lt2lvXE';
 
 var listView = function(id, piecename, ranking, artstyle) {
     return `<div class="col-sm-6">
@@ -67,7 +67,7 @@ var detailView = function(id, piecename, images, descriptions, ranking) {
 
 // Get and display the data for one item based on on the ID
 var getDataForId = function(id) {
-  $.getJSON(`https://api.airtable.com/v0/appeG8kkwJsPViya8/Hand%20Drawings/${id}?api_key=keyB7EQxA9Lt2lvXE`, function( record ) {
+  $.getJSON(`https://api.airtable.com/v0/appeG8kkwJsPViya8/Art%20Pieces/${id}?api_key=keyB7EQxA9Lt2lvXE`, function( record ) {
     //console.log(data);
     var html = [];
     html.push(`<div class="row">`);
