@@ -19,7 +19,7 @@ var listView = function(id, piecename, ranking, artstyle) {
           <h2><a href="?id=${id}">${piecename}</a></h2>
           <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">${ranking}</small>
-          <small class="text-muted">${artstlye}</small>
+          <small class="text-muted">${artstyle}</small>
           </div>
         </div>
     </div>`;
@@ -39,7 +39,7 @@ var listView = function(id, piecename, ranking, artstyle) {
         var piecename = fields["PieceName"];
         var ranking = fields["Ranking"];
         var artstyle = fields["ArtStyle"];
-        var itemHTML = listView(id, piecename, ranking, arttype);
+        var itemHTML = listView(id, piecename, ranking, artstyle);
         html.push(itemHTML);
     });
     html.push(`</div>`);
