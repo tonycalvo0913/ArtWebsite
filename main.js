@@ -13,13 +13,13 @@ var api_key = 'keyB7EQxA9Lt2lvXE'
 //This is the url from the Airtable Authentication section
 var airtable_list_url = 'https://api.airtable.com/v0/appeG8kkwJsPViya8/Hand%20Drawings?api_key=keyB7EQxA9Lt2lvXE';
 
-var listView = function(id, piecename, ranking, arttype) {
+var listView = function(id, piecename, ranking, artstyle) {
     return `<div class="col-sm-6">
     <div class="card mb-4 box-shadow">
           <h2><a href="?id=${id}">${piecename}</a></h2>
           <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">${ranking}</small>
-          <small class="text-muted">${arttype}</small>
+          <small class="text-muted">${artstlye}</small>
           </div>
         </div>
     </div>`;
@@ -38,7 +38,7 @@ var listView = function(id, piecename, ranking, arttype) {
         var fields = val.fields;
         var piecename = fields["PieceName"];
         var ranking = fields["Ranking"];
-        var arttype = fields["ArtType"];
+        var artstyle = fields["ArtStyle"];
         var itemHTML = listView(id, piecename, ranking, arttype);
         html.push(itemHTML);
     });
@@ -49,7 +49,7 @@ var listView = function(id, piecename, ranking, arttype) {
 }
 
 // Template that generates HTML for one item in our detail view, given the parameters passed in
-var detailView = function(id, piecename, images, descriptions, ranking, arttype) {
+var detailView = function(id, piecename, images, descriptions, ranking, artstyle) {
   return `<div class="col-sm-12">
     <div class="card mb-4 box-shadow">
       <img class="card-img-top" src="${images}">
@@ -58,7 +58,7 @@ var detailView = function(id, piecename, images, descriptions, ranking, arttype)
         <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">${descriptions}</small>
           <small class="text-muted">${ranking}</small>
-          <small class="text-muted">${arttype}</small>
+          <small class="text-muted">${artstyle}</small>
         </div>
         <hr />
       </div>
@@ -79,8 +79,8 @@ var getDataForId = function(id) {
       var images= fields["Images"] ? fields["Images"][0].url : '';
       var descriptions = fields["Descriptions"];
       var ranking= fields["Ranking"];
-      var arttype = fields["ArtType"];
-      var itemHTML = detailView(id, piecename, images, descriptions, ranking, arttype);
+      var artstyle = fields["ArtStyle"];
+      var itemHTML = detailView(id, piecename, images, descriptions, ranking, artstyle);
       html.push(itemHTML);
     html.push(`</div>`);
     $(".detail-view").append(html.join(""));
