@@ -37,6 +37,7 @@ var listView = function(id, piecename, ranking, artstyle) {
         var id = val.id;
         var fields = val.fields;
         var piecename = fields["PieceName"];
+        piecename.sort();
         var ranking = fields["Ranking"];
         var artstyle = fields["ArtStyle"];
         var itemHTML = listView(id, piecename, ranking, artstyle);
