@@ -41,6 +41,7 @@ var listView = function(id, piecename, ranking, artstyle) {
         var artstyle = fields["ArtStyle"];
         var itemHTML = listView(id, piecename, ranking, artstyle);
         html.push(itemHTML);
+        [{field: "PieceName", direction: "desc"}]
         //piecename.sort();
     });
     html.push(`</div>`);
