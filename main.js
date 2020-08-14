@@ -46,7 +46,7 @@ var listView = function(id, piecename, ranking, artstyle) {
     html.push(`</div>`);
   // 3. Adds HTML for every item to our page
   $(".list-view").append(html.join(""));
-   [{field: "PieceName", direction: "asc"}]
+   //[{field: "PieceName", direction: "asc"}]
 });
 }
 
